@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreSchoolWeb", "PreSchoolAzureFunction\PreSchoolWeb.csproj", "{9FADF894-A116-4718-9F73-51CFB3B1C55B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreSchoolAzureFunc", "PreSchoolAzureFunc\PreSchoolAzureFunc.csproj", "{F566B8BD-5E2B-4357-A57C-FB7B715E0B79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreSchoolAzureFunc", "PreSchoolAzureFunc\PreSchoolAzureFunc.csproj", "{F566B8BD-5E2B-4357-A57C-FB7B715E0B79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
