@@ -29,7 +29,7 @@ namespace PreSchoolAzureFunction.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(CheckinRequest checkinRequest,IFormFile file)
         {
-            //checkinRequest.Id = Guid.NewGuid().ToString();
+            checkinRequest.Id = Guid.NewGuid().ToString();
             
             using (var content = new StringContent(JsonConvert.SerializeObject(checkinRequest),System.Text.Encoding.UTF8,"application/json"))
             {
@@ -49,7 +49,7 @@ namespace PreSchoolAzureFunction.Controllers
                 };
 
                 await blobClient.UploadAsync(file.OpenReadStream(), httpHeaders);
-                return View();
+                return View(nameof(FinishRequest));
             }
             return RedirectToAction(nameof(FinishRequest));
         }

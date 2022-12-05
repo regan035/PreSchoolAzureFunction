@@ -21,11 +21,11 @@ namespace PreSchoolAzureFunc
         {
             log.LogInformation("Checkin/out request recieved by RequestUploadToQueue function.");
 
-            string name = req.Query["name"];
+           
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             CheckinRequest data = JsonConvert.DeserializeObject<CheckinRequest>(requestBody);
-            //name = name ?? data?.name;
+            
             await checkinRequestQueue.AddAsync(data);
             string responseMessage = "Checkin/out request has been received for" +data.Name;
 
