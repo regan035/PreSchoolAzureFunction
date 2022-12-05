@@ -14,7 +14,7 @@ namespace PreSchoolAzureFunc
     {
         [FunctionName("ResizeImageOnBlobUpload")]
         public void Run([BlobTrigger("imagefunction/{name}", Connection = "AzureWebJobsStorage")]Stream myBlob,
-            [Blob("imagefunction-sm/{name}",FileAccess.Write)] Stream myBlobOutput,
+            [Blob("imagefunction-resize/{name}",FileAccess.Write)] Stream myBlobOutput,
             string name, ILogger log)
         {
             log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
